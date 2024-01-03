@@ -1,0 +1,41 @@
+<div class="main-container">
+
+  <div class="row min-height-680 no-flex-wrap">
+
+    <!-- Sidebar -->
+    <div class="card col-md-2 mr-2">
+      <div class="col pl-0 pr-0">
+        <div class="card mt-3 mb-2 border-none text-center">
+          <h4>GESTION DE STOCK</h4>
+          <small class="form-text text-muted">By Ali Bouali</small>
+        </div>
+        <div class="mb-1"> <!-- Adjusted margin-bottom for space -->
+          <app-menu></app-menu>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-md-10 pl-0 pr-0">
+      <!-- Header -->
+      <div class="card p-3 min-height-80 mb-2">
+        <!-- Header Content -->
+        <app-header></app-header>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="card mb-3" style="min-height: 480px">
+        <!-- Router Outlet for dynamic content -->
+        <router-outlet></router-outlet>
+      </div>
+      <div class="card min-height-80 mb-2" style="min-height: 82px">
+        <!-- Footer Content -->
+        Footer Content
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>

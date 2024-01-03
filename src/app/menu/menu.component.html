@@ -1,0 +1,23 @@
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item" *ngFor="let menu of menuProperties">
+    <h2 class="accordion-header" [attr.id]="'heading' + menu.id">
+      <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'" [attr.data-bs-target]="'#collapse' + menu.id"
+        [attr.aria-expanded]="menu.active ? 'true' : 'false'" [attr.aria-controls]="'collapse' + menu.id">
+        <i class="{{menu.icon}} fa-2x me-3"></i>
+        <span class="fw-bold text-dark">{{menu.titre}}</span>
+      </button>
+    </h2>
+    <div [id]="'collapse' + menu.id" class="accordion-collapse collapse" [ngClass]="{'show': menu.active}" [attr.aria-labelledby]="'heading' + menu.id" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let sousMenu of menu.sousMenu" [ngClass]="{'text-dark': sousMenu.active, 'bg-light': sousMenu.active, '': !sousMenu.active}">
+            <a href="javascript:void(0);" (click)="navigate(sousMenu)" style="color: inherit; text-decoration: none;">
+              <i class="{{sousMenu.icon}} fa-lg me-2"></i>
+              <span class="ms-2" [ngStyle]="{'font-size': sousMenu.active ? '1.2rem' : '1rem', 'font-weight': sousMenu.active ? 'bold' : 'normal', 'color': sousMenu.active ? '#333' : 'inherit'}">{{sousMenu.titre}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

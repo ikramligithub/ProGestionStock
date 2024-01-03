@@ -1,0 +1,72 @@
+<div class="col mb-3">
+  <div class="col-md-12 mb-3 mt-3 p-0">
+    <button style="background-color: transparent; border: none;">
+      <img src="assets/product.png" class="rounded-circle" width="170px" height="170px" />
+      <input hidden type="file">
+    </button>
+  </div>
+  <hr>
+
+  <div class="col-md-12">
+    <div class="container mt-2">
+    <div class="col-md-12 mb-4">
+      <h2><i class="fas fa-info-circle blue-color"></i>&nbsp;Information du {{origin}}</h2>
+    </div>
+  </div>
+    <div class="col-md-12">
+      <div class="alert alert-danger" >
+        <div >
+          <span >RR</span>
+        </div>
+      </div>
+
+      <form>
+        <div class="container mt-2">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="codearticle" placeholder="Nom">
+          </div>
+
+           <div class="col-md-6">
+            <input type="text" class="form-control" name="designation" placeholder="Adresse 1"  >
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="prixunitht" placeholder="Prenom">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="tauxtva" placeholder="Pays">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="prixunitttc" placeholder="Telephone">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="prixunitttc" placeholder="Code postal">
+          </div>
+        </div>
+        </div>
+
+</form>
+</div>
+</div>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-end">
+
+        <button class="btn btn-danger  m-1" (click)="cancelClick()">
+          <i class="fas fa-ban"></i>&nbsp; Annuler
+        </button>
+
+        <button class="btn btn-primary m-1">
+          <i class="fas fa-save"></i>&nbsp; Enregistrer
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
